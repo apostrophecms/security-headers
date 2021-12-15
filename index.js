@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   bundle: {
-    directory: `modules`,
+    directory: 'modules',
     modules: getBundleModuleNames()
   },
   options: {
@@ -31,11 +31,11 @@ module.exports = {
       general: {
         'default-src': 'HOSTS',
         // Because it is necessary for some of the output of tiptap
-        'style-src': "HOSTS 'unsafe-inline'",
+        'style-src': 'HOSTS \'unsafe-inline\'',
         'script-src': 'HOSTS',
         'font-src': 'HOSTS',
         'img-src': 'HOSTS',
-        'frame-src': `'self'`
+        'frame-src': '\'self\''
       },
 
       // Set this sub-option to false if you wish to forbid google fonts
@@ -53,7 +53,7 @@ module.exports = {
         'default-src': '*.google-analytics.com *.doubleclick.net',
         // Note that use of google tag manager by definition brings in scripts from
         // more third party sites and you will need to add policies for them
-        'script-src': '*.google-analytics.com *.doubleclick.net *.googletagmanager.com',
+        'script-src': '*.google-analytics.com *.doubleclick.net *.googletagmanager.com'
       }
     },
 
@@ -64,7 +64,6 @@ module.exports = {
     return {
       'apostrophe:modulesRegistered': {
         determineSecurityHeaders() {
-          console.log('TODO we are allowing unsafe-inline for styles');
           self.securityHeaders = {};
           const simple = [
             'Strict-Transport-Security',
@@ -81,7 +80,7 @@ module.exports = {
           const hosts = self.legitimateHosts();
           if (self.options['Content-Security-Policy'] === true) {
             const hostsString = hosts.join(' ');
-            const policies = {}
+            const policies = {};
             const source = Object.assign({}, self.options.minimumPolicies, self.options.policies || {});
             for (const policy of Object.values(source)) {
               for (const [ key, val ] of Object.entries(policy)) {
@@ -115,7 +114,7 @@ module.exports = {
           }
         }
       }
-    }
+    };
   },
 
   middleware(self) {
@@ -132,7 +131,7 @@ module.exports = {
         }
         return next();
       }
-    }
+    };
   },
 
   methods(self) {
@@ -141,7 +140,7 @@ module.exports = {
         if (self.options.legitimateHosts) {
           return self.options.legitimateHosts;
         }
-        let hosts = [];
+        const hosts = [];
         if (self.apos.baseUrl) {
           hosts.push(self.parseHostname(self.apos.baseUrl));
         }
@@ -155,7 +154,7 @@ module.exports = {
           hosts.push(self.parseHostname(mediaUrl));
         }
         // Inner quotes intentional
-        hosts.push(`'self'`);
+        hosts.push('\'self\'');
         // Keep unique
         return Array.from(new Set(hosts));
       },
