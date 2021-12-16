@@ -30,7 +30,8 @@ module.exports = {
     minimumPolicies: {
       general: {
         'default-src': 'HOSTS',
-        // Because it is necessary for some of the output of tiptap
+        // Because it is necessary for some of the output of the tiptap
+        // rich text editor shipped with Apostrophe
         'style-src': 'HOSTS \'unsafe-inline\'',
         'script-src': 'HOSTS',
         'font-src': 'HOSTS',
