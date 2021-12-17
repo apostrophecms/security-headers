@@ -115,7 +115,7 @@ module.exports = {
         'style-src': "HOSTS 'unsafe-inline'",
         'script-src': 'HOSTS',
         'font-src': 'HOSTS',
-        'frame-src': `'self'`
+        'frame-src': "'self'"
       },
 
       // Set this sub-option to false if you wish to forbid google fonts

@@ -9,8 +9,8 @@ module.exports = {
   options: {
     // 1 year. Do not include subdomains as they could be unrelated sites
     'Strict-Transport-Security': 'max-age=31536000',
-    // You may also set to DENY, if you are not using features such
-    // as iframe preview of commits in apostrophe-workflow
+    // You may also set to DENY, if you are not using features that
+    // iframe the site within itself, but that can be useful
     'X-Frame-Options': 'SAMEORIGIN',
     'X-Content-Type-Options': 'nosniff',
     // Very new. Used to entirely disable browser features like geolocation.
