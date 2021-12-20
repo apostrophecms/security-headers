@@ -6,8 +6,8 @@
     <a aria-label="Apostrophe logo" href="https://v3.docs.apostrophecms.org">
       <img src="https://img.shields.io/badge/MADE%20FOR%20Apostrophe%203-000000.svg?style=for-the-badge&logo=Apostrophe&labelColor=6516dd">
     </a>
-    <a aria-label="Test status" href="https://github.com/apostrophecms/apostrophe/actions">
-      <img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/apostrophecms/security-headers/Tests/main?label=Tests&labelColor=000000&style=for-the-badge">
+    <a aria-label="Test status" href="https://github.com/apostrophecms/security-headers/actions">
+      <img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/apostrophecms/security-headers/tests/main?label=Tests&logo=github&labelColor=000&style=for-the-badge">
     </a>
     <a aria-label="Join the community on Discord" href="http://chat.apostrophecms.org">
       <img alt="" src="https://img.shields.io/discord/517772094482677790?color=5865f2&label=Join%20the%20Discord&logo=discord&logoColor=fff&labelColor=000&style=for-the-badge&logoWidth=20">
@@ -137,7 +137,7 @@ module.exports = {
         // Note that use of google tag manager by definition brings in scripts from
         // more third party sites and you will need to add policies for them
         'script-src': '*.google-analytics.com *.doubleclick.net *.googletagmanager.com',
-      }  
+      }
     }
   }
 };
