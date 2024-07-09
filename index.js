@@ -83,7 +83,6 @@ module.exports = {
             const hostsString = hosts.join(' ');
             const policies = {};
             const source = Object.assign({}, self.options.minimumPolicies, self.options.policies || {});
-            console.log(source);
             for (const policy of Object.values(source)) {
               for (const [ key, val ] of Object.entries(policy)) {
                 if (!policy) {
