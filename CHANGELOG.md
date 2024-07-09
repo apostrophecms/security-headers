@@ -1,5 +1,11 @@
 # Changelog
 
+## UNRELEASED
+
+### Changes
+
+* Add `blob:` to `img-src` directive to support Media Manager calls to `URL.createObjectURL`.
+
 ## 1.0.1 - 2023-03-06
 
 ### Fixes
