@@ -35,7 +35,7 @@ module.exports = {
         'style-src': 'HOSTS \'unsafe-inline\'',
         'script-src': 'HOSTS',
         'font-src': 'HOSTS',
-        'img-src': 'HOSTS',
+        'img-src': 'HOSTS blob:',
         'frame-src': '\'self\''
       },
 
